@@ -49,6 +49,8 @@ jobs:
       
       - name: Merge to production
         run: |
+          git config --global user.email "yashashm.dev@gmail.com"
+          git config --global user.name "Yashas H Majmudar"
           git checkout production
           git merge main
           git push origin production
