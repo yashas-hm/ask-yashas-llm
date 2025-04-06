@@ -40,29 +40,26 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: main
-      
-      - name: Git Configuration
+      - name: Cone with PAT
         run: |
-          git remote remove origin
-          git remote add origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
+          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git repo
+          cd repo
           git config --global user.email yashashm.dev@gmail.com
           git config --global user.name yashas-hm
+          git checkout main
           
       - name: Fetch all branches
-        run: git fetch --all
-          
+        run: |
+          cd repo
+          git fetch --all
+
       - name: Merge to production
         run: |
+          cd repo
           git checkout production
           git merge main
-      
+
       - name: Push to production with PAT
-        run: |
-          git remote -v
+        run:  |
+          cd repo
           git push --set-upstream origin production
