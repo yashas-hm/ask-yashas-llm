@@ -61,9 +61,7 @@ jobs:
           git merge main
       
       - name: Push to production with PAT
-        env:
-          PAT: ${{ secrets.ACCESS_TOKEN }}
         run: |
           git remote remove origin
-          git remote add origin https://${PAT}@github.com/${{ github.repository }}.git
+          git remote add origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
           git push origin production
