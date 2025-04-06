@@ -47,10 +47,19 @@ jobs:
           fetch-depth: 0
           ref: main
       
-      - name: Merge to production
+      - name: Git Configuration
         run: |
           git config --global user.email "yashashm.dev@gmail.com"
           git config --global user.name "Yashas H Majmudar"
+          
+      - name: Merge to production
+        run: |
           git checkout production
           git merge main
+      
+      - name: Push to production with PAT
+        env:
+          PAT: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          git remote set-url origin https://x-access-token:${PAT}@github.com/${{ github.repository }}
           git push origin production
