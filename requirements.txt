@@ -1,0 +1,10 @@
+fastapi
+pydantic
+uvicorn
+chromadb
+langchain
+langchain_chroma
+langchain-google-genai
+langchain-community
+langchain-huggingface
+sentence-transformers
