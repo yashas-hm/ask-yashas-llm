@@ -1,0 +1,65 @@
+name: Deploy to Render
+
+on:
+  # Optional to trigger from GitHub UI
+  workflow_dispatch:
+  # Trigger on branch push
+  push:
+    branches:
+      - main
+    paths:
+      - api/**
+      - .vercelignore
+      - app.py
+      - requirements.txt
+      - vectorestore_generator.py
+      - vercel.json
+    
+jobs:
+  
+  check-data-change:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Data File Check
+        run: |
+          FILE_TO_CHECK="api/data.txt"
+          if git diff --name-only $GITHUB_SHA^..$GITHUB_SHA | grep -q "$FILE_TO_CHECK"; then
+              echo "Data File has been modified. Cancelling workflow."
+              exit 0
+          else
+              echo "Data File has not been modified."
+          fi
+      
+  deploy:
+    needs: check-data-change
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Cone with PAT
+        run: |
+          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git repo
+          cd repo
+          git config --global user.email yashashm.dev@gmail.com
+          git config --global user.name yashas-hm
+          git checkout main
+          
+      - name: Fetch all branches
+        run: |
+          cd repo
+          git fetch --all
+
+      - name: Merge to production
+        run: |
+          cd repo
+          git checkout production
+          git merge main
+
+      - name: Push to production with PAT
+        run:  |
+          cd repo
+          git push --set-upstream origin production

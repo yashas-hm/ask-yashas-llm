@@ -1,9 +1,11 @@
-#name: Build VectorStore and Deploy to Vercel
-#
-#on:
-#  push:
-#    branches:
-#      - main
-#    paths:
-#      - api/data.txt
-#    
+name: Build VectorStore and Deploy to Vercel
+
+on:
+  # Optional to trigger from GitHub UI
+  workflow_dispatch:
+  # Trigger on branch push
+  push:
+    branches:
+      - dev
+    paths:
+      - api/data.txt
