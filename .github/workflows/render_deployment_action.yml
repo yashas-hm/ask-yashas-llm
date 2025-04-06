@@ -65,4 +65,4 @@ jobs:
       - name: Push to production with PAT
         run: |
           git remote -v
-          git push origin production
+          git push --set-upstream origin production
