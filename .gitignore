@@ -148,3 +148,4 @@ cython_debug/
 
 # Credits: https://github.com/github/gitignore
 vectorstore/
+.vercel

@@ -23,7 +23,6 @@ class LLMChain:
             chain_type_kwargs={"prompt": LLMChain.generate_prompt(llm_history)},
         )
         result = qa_chain({'query': query})
-        print(result)
         return result['result']
 
     @staticmethod
@@ -58,7 +57,7 @@ class LLMChain:
         chat_history = []
         for chat in history:
             if chat['role'].upper() == AI_MSG_KEY:
-                chat_history.append(f'AskYashas: {chat['message']}')
+                chat_history.append(f'AskYashas: {chat["message"]}')
             elif chat['role'].upper() == HUMAN_MSG_KEY:
-                chat_history.append(f'User: {chat['message']}')
+                chat_history.append(f'User: {chat["message"]}')
         return '\n'.join(chat_history)

@@ -1,0 +1,9 @@
+#name: Build VectorStore and Deploy to Vercel
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#    paths:
+#      - api/data.txt
+#    

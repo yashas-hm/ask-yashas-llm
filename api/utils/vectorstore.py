@@ -8,7 +8,7 @@ from api.constants import EMBEDDING_MODEL
 
 
 class VectorStore:
-    def __init__(self, file_path: str = './vectorstore') -> None:
+    def __init__(self, file_path: str = './vectorstore'):
         self.persist_dir = file_path
 
     def load_vector_store(self) -> Chroma:
