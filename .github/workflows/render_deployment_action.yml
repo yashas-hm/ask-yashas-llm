@@ -23,7 +23,7 @@ jobs:
     steps:
 
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       - name: Data File Check
         run: |
@@ -42,15 +42,15 @@ jobs:
     steps:
 
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
       
       - name: Git Configuration
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.email yashashm.dev@gmail.com
+          git config --global user.name yashas-hm
           
       - name: Fetch all branches
         run: git fetch --all
@@ -64,5 +64,6 @@ jobs:
         env:
           PAT: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          git remote set-url origin https://x-access-token:${PAT}@github.com/${{ github.repository }}.git
+          git remote remove origin
+          git remote add origin https://x-access-token:${PAT}@github.com/${{ github.repository }}.git
           git push origin production
