@@ -49,8 +49,8 @@ jobs:
       
       - name: Git Configuration
         run: |
-          git config --global user.email "yashashm.dev@gmail.com"
-          git config --global user.name "Yashas H Majmudar"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
       - name: Merge to production
         run: |
