@@ -52,6 +52,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
+      - name: Fetch all branches
+        run: git fetch --all
+          
       - name: Merge to production
         run: |
           git checkout production
@@ -61,5 +64,5 @@ jobs:
         env:
           PAT: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          git remote set-url origin https://$PAT@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${PAT}@github.com/${{ github.repository }}.git
           git push origin production
