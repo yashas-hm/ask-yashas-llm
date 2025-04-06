@@ -65,5 +65,5 @@ jobs:
           PAT: ${{ secrets.ACCESS_TOKEN }}
         run: |
           git remote remove origin
-          git remote add origin https://x-access-token:${PAT}@github.com/${{ github.repository }}.git
+          git remote add origin https://${PAT}@github.com/${{ github.repository }}.git
           git push origin production
