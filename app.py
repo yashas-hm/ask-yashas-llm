@@ -17,7 +17,7 @@ app.add_middleware(CORSMiddleware)
 
 @app.get('/')
 def redirect_to_site():
-    return RedirectResponse("https://yashashm.dev", status_code=301)
+    return RedirectResponse("https://yashashm.dev", status_code=200)
 
 @app.post('/prompt')
 async def answer(query: QueryModel):
