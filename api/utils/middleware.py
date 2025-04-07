@@ -11,9 +11,13 @@ def bypass_middleware(key: str) -> bool:
     else:
         return True
 
+
 class CORSMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request, call_next):
         if bypass_middleware(key=request.query_params.get("bypass_key")):
+            return await call_next(request)
+
+        if request.url.path == '/':
             return await call_next(request)
 
         allowed_origin = [
@@ -25,4 +29,4 @@ class CORSMiddleware(BaseHTTPMiddleware):
         if origin in allowed_origin:
             return JSONResponse({"detail": "Forbidden"}, status_code=403)
 
-        return await call_next(request)    
+        return await call_next(request)
