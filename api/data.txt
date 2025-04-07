@@ -97,6 +97,123 @@ Company: Shree Mahesh Heritage
 - Integrated offline storage capabilities using Room Database into the app, allowing users to access their browsing history even without an internet connection.
 - Optimized performance by implementing threading techniques, resulting in a 50% decrease in app loading time.
 
+Projects
+AskYashas
+AskYashas is a personalized Retrieval-Augmented Generation (RAG) chatbot designed to answer questions about me (Yashas Majmudar) with precision and context-awareness. It combines a powerful language model with a semantic search retriever to fetch relevant information from curated knowledge — enabling grounded, factual, and context-rich responses. Whether it’s facts, timelines, or personal achievements, AskYashas knows the story.
+Skills: Python, RAG, Langchain, Serverless, LLM
+Link: https://github.com/yashas-hm/ask-yashas-llm
+Henchman
+Henchman is an all-in-one, interactive command-line tool designed to simplify the creation, setup, and management of development projects.
+Skills: JavaScript, Bash
+Link: https://github.com/yashas-hm/henchman
+Illness Lab
+A virtual escape room game to teach medical residents disease detection, starting with diabetes, combining interactive learning with problem-solving to enhance diagnostic skills.
+Skills: Flutter, Game
+Link: https://yashas-hm-unc.github.io/illness-lab-website/
+Copter War
+Copter War is a fast-paced 2D arcade game where you navigate a helicopter, dodge obstacles, and shoot enemies to survive.
+Skills: JavaScript
+Link: https://github.com/yashas-hm/copter-war
+MedTourism Co.
+A comprehensive medical tourism app offering clinic search, community forums, health tracking, meal planning, and real-time support.
+Skills: Flutter, Node.js, JavaScript, TypeScript, MariaDB, Python
+Link: https://github.com/yashas-hm/just-documentation/blob/main/MedTourismCo/MedTourismCo.md
+DentaVacation
+Innovative Flutter app revolutionizing dental care. Spearheaded the development of the app, resulting in a 40% increase in user engagement. Integrated quizzes, videos, chat, habit tracker, cost calculator, and a Docker-based forum. Performance was boosted via custom APIs and a dynamic text update system.
+Skills: Flutter, Node.js, JavaScript, TypeScript, SQL, Python
+Link: https://github.com/yashas-hm/just-documentation/blob/main/DentaVacation/DentaVacation.md
+Spotter: Find your Spot!
+Tailored spot suggestions, community engagement, and local discounts. Increased user engagement by 40%, integrated Firebase & Google Cloud, and used BLoC for maintainability.
+Skills: Flutter, Firebase, Maps SDK
+Link: https://github.com/spotter-find-your-spot/spotter
+ASL Gesture Detection
+Machine Learning model that converts ASL gestures to text using TensorFlow and MediaPipe.
+Skills: Python, TensorFlow, MediaPipe
+Link: https://github.com/yashas-hm/ASL-Gesture-Sensing
+Day Night Switch
+A customizable Flutter widget for toggling between day and night themes with smooth transitions.
+Skills: Flutter, Animations
+Link: https://github.com/yashas-hm/day-night-themed-switcher
+Glow App Bar
+Widget which shows a glowing transition when index changes and is fully customizable.
+Skills: Flutter, Animations
+Link: https://pub.dev/packages/glow_bottom_app_bar
+Direct Message
+Direct Message lets users send WhatsApp messages to unsaved numbers instantly and effortlessly.
+Skills: Flutter
+Link: https://play.google.com/store/apps/details?id=dev.yashashm.directmessage
+AutoWhatsapp
+An Android app automating WhatsApp replies for enhanced messaging efficiency and convenience.
+Skills: Android, Background Services, Firebase
+Link: https://github.com/yashas-hm/AutoWhatsapp
+Smart Glass
+Low-Cost Efficient AR Smart Glass prototype using Arduino and C++.
+Skills: IoT, Arduino, AR, C++
+Link: https://github.com/yashas-hm/Smart-Glass
+Space Invaders
+Re-creation of the classic game Space Invaders using JavaFX.
+Skills: Java, JavaFX
+Link: https://github.com/yashas-hm/Space_Invaders_JavaFX
+Recipe Scraper API
+A simple web scraper API for recipes built with Flask.
+Skills: Python, Flask
+Link: https://github.com/yashas-hm/Recipe-Scraper-API
+Faculty Exam Assigner
+A GUI-based system that randomly assigns faculties to exam slots while adhering to specified constraints on reoccurrence.
+Skills: Python, Tkinter, Pandas
+Link: https://github.com/yashas-hm/Exam_Supervision_Assigner
+MIDI Drums
+A simple, cost-efficient MIDI drum set using Arduino and C++.
+Skills: IoT, Arduino, C++
+Link: https://github.com/yashas-hm/Arduino-MIDI-Drums
+
+Volunteering
+Role: Backend Developer
+Duration: September 2024 - December 2024
+Organization: App Team Carolina
+Role: President
+Duration: June 2021 – June 2022
+Organization: Student Activity Cell, Indus University
+Demonstrated strong leadership skills and a proactive approach to organizing and overseeing a wide range of student events.
+Managed a dedicated team of 30 students, providing guidance, support, and direction to ensure the successful execution of over 80 events, highlighting effective team management and coordination abilities.
+Role: Google Android Jams Facilitator
+Duration: December 2021 – January 2022
+Organization: Google Developer Student Clubs, Indus University
+Exemplified a commitment to fostering technological learning and community engagement among students.
+Successfully organized and led three educational events focused on teaching Android development to enthusiastic students, showcasing leadership in promoting skill development and knowledge sharing within the student community.
+Role: Team Leader
+Duration: May 2019 – May 2023
+Organization: Multiple National Level Hackathons
+Appointed as Team Leader in multiple National Level Hackathons, showcasing recognition of leadership abilities and responsibility in guiding teams of 3–5 students through intensive competition environments.
+Demonstrated adept project management by overseeing and actively contributing to various projects within the hackathon context, highlighting a dynamic skill set and proactive problem-solving approach.
+
+Publications
+Title: On-Screen Navigation with Hand Gestures using Computer Vision
+Published In: IJSER (International Journal of Scientific & Engineering Research)
+Date: November 2022
+Researched and developed a computer vision-based hand gesture screen navigation system, utilizing deep learning algorithms to accurately interpret and recognize hand gestures in real-time with a 95% accuracy rate.
+Implemented the hand gesture recognition system as a gesture control mechanism for mobile devices, resulting in a 50% reduction in reliance on touchpad or mouse input devices.
+Title: Image Segmentation and Deep Learning for Plant Disease Detection ➚
+Published In: Harbin Gongye Daxue Xuebao / Journal of Harbin Institute of Technology
+Date: December 2022
+Developed and implemented advanced image segmentation techniques, including HSV segmentation, color correction, and flood fill algorithm, increasing disease detection accuracy by 15%.
+Trained a CNN-based image segmentation model on a dataset of over 30,000 leaf images from five different plants, achieving a validation accuracy of 97.95%.
+Optimized model parameters through extensive experimentation to minimize computational load while maximizing classification accuracy, improving both efficiency and performance.
+
+Achievements
+Smart India Hackathon 2022 – Finals
+Developed a Fake News Detection AI Website & API, showcasing expertise in combating misinformation and advancing technology for societal benefit 🏅🤖.
+Nirma University National Hackathon 2022 – 1st Place
+Developed an American Sign Language gesture detector using open Computer Vision, showcasing commitment to accessibility and inclusive technology 🏆👐.
+Nirma University National Hackathon 2021 – 1st Place
+Developed a Cheque Scanner OCR Mobile App, demonstrating innovative mobile technology solutions and excellence in application development 🥇📱.
+Parul University National Hackathon 2020 – 1st Place
+Developed an AR Weather App, demonstrating consistent excellence in problem-solving and technological innovation 🏆🚀.
+Indus University National e-Hackathon 2019 – 1st Place
+Developed an IoT MR smart-glass, showcasing proficiency in merging IoT and Mixed Reality for cutting-edge solutions 🥇🔍.
+Student Startup and Innovation Program 2019 – 2nd Place
+Awarded by the CM of Gujarat, for entrepreneurial endeavors and innovative contributions to the startup ecosystem 🌐💡.
+
 Important Links
 Website: https://yashashm.dev
 LinkedIn: https://linkedin.com/in/yashashm
