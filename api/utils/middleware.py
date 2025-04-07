@@ -26,7 +26,7 @@ class CORSMiddleware(BaseHTTPMiddleware):
             "https://ask-yashas-llm.onrender.com"
         ]
         origin = request.headers.get("Origin")
-        if origin in allowed_origin:
+        if origin not in allowed_origin:
             return JSONResponse({"detail": "Forbidden"}, status_code=403)
 
         return await call_next(request)
