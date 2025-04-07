@@ -6,7 +6,7 @@ on:
   # Trigger on branch push
   push:
     branches:
-      - dev
+      - main
     paths:
       - api/data.txt
 jobs:
@@ -14,26 +14,33 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+          
       - name: Cone with PAT
         run: |
-          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git repo
-          cd repo
+          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git .
           git config --global user.email yashashm.dev@gmail.com
           git config --global user.name yashas-hm
           git checkout main
 
       - name: Fetch all branches
-        run: |
-          cd repo
-          git fetch --all
+        run: git fetch --all
+          
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
 
       - name: Merge to production
         run: |
-          cd repo
           git checkout production
           git merge main
+          
+      - name: Generate Vectorstore
+        run: |
+          rm -rf ./vectorstore
+          python vectorestore_generator.py
 
       - name: Push to production with PAT
         run:  |
-          cd repo
           git push --set-upstream origin production

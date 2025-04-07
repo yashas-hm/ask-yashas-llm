@@ -22,7 +22,7 @@ class LLMChain:
             chain_type="stuff",
             chain_type_kwargs={"prompt": LLMChain.generate_prompt(llm_history)},
         )
-        result = qa_chain({'query': query})
+        result = qa_chain.invoke({'query': query})
         return result['result']
 
     @staticmethod
