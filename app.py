@@ -7,7 +7,7 @@ from api.model.query_model import QueryModel
 from api.utils.llm_pipeline import LLMChain
 from api.utils.middleware import CORSMiddleware
 
-app=FastAPI()
+app=FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 api_token = os.environ.get("API_TOKEN")
 llm=LLMChain(api_token)
 
