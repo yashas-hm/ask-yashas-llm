@@ -9,6 +9,8 @@ from api.utils.middleware import CORSMiddleware
 
 app=FastAPI()
 api_token = os.environ.get("API_TOKEN")
+if api_token is None:
+    api_token='AIzaSyDj8REBgZE21uFjvqBU8pgPoJNE3I7Ner0'
 llm=LLMChain(api_token)
 
 app.add_middleware(CORSMiddleware)
