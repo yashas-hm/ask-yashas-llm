@@ -14,6 +14,7 @@ on:
       - requirements.txt
       - vectorestore_generator.py
       - vercel.json
+      - renderl.yaml
     
 jobs:
   
@@ -42,24 +43,18 @@ jobs:
     steps:
       - name: Cone with PAT
         run: |
-          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git repo
-          cd repo
+          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git .
           git config --global user.email yashashm.dev@gmail.com
           git config --global user.name yashas-hm
           git checkout main
           
       - name: Fetch all branches
-        run: |
-          cd repo
-          git fetch --all
+        run: git fetch --all
 
       - name: Merge to production
         run: |
-          cd repo
           git checkout production
           git merge main
 
       - name: Push to production with PAT
-        run:  |
-          cd repo
-          git push --set-upstream origin production
+        run: git push --set-upstream origin production
