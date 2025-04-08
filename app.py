@@ -19,7 +19,7 @@ app.add_middleware(CORSMiddleware)
 def redirect_to_site():
     return RedirectResponse("https://yashashm.dev", status_code=200)
 
-@app.post('/prompt')
+@app.post('/api/prompt')
 async def answer(query: QueryModel):
     try:
         return await answer_endpoint(query, llm)
