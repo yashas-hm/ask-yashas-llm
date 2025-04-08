@@ -22,8 +22,7 @@ class CORSMiddleware(BaseHTTPMiddleware):
 
         allowed_origin = [
             "https://yashashm.dev",
-            "https://chat.yashashm.dev",
-            "https://ask-yashas-llm.onrender.com"
+            "https://ask.yashashm.dev",
         ]
         origin = request.headers.get("Origin")
         if origin not in allowed_origin:
