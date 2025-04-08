@@ -12,7 +12,7 @@ def bypass_middleware(key: str) -> bool:
         return True
 
 
-class CORSMiddleware(BaseHTTPMiddleware):
+class SecurityMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request, call_next):
         if bypass_middleware(key=request.query_params.get("bypass_key")):
             return await call_next(request)

@@ -1,17 +1,24 @@
 import os
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
-
+from fastapi.middleware.cors import CORSMiddleware
 from api.endpoints.answer import answer_endpoint
 from api.model.query_model import QueryModel
 from api.utils.llm_pipeline import LLMChain
-from api.utils.middleware import CORSMiddleware
+from api.utils.middleware import SecurityMiddleware
 
 app=FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 api_token = os.environ.get("API_TOKEN")
 llm=LLMChain(api_token)
 
-app.add_middleware(CORSMiddleware)
+app.add_middleware(SecurityMiddleware)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True,
+)
 
 @app.get('/')
 def redirect_to_site():
