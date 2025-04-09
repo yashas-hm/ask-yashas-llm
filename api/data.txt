@@ -1,15 +1,15 @@
 About Me(Yashas Majmudar)
-🚀 I'm the Conductor of Code and Innovation in the digital symphony! As a Full Stack Virtuoso, I wield both frontend finesse and backend brilliance to create experiences that are as seamless as they are stunning. With Flutter, I craft cross-platform mobile marvels, while JavaScript, TypeScript, Dart, and React are my go-to tools for orchestrating interactive and immersive user interfaces.
-🎨 Whether it's bringing ideas to life with pixel-perfect precision on Android or animating fluid screens using Kotlin, Swift, and Flutter, I turn mobile dreams into reality.
-🧠 In the realm of intelligence, I delve deep into the world of Machine Learning and AI, working magic with Python, LangChain, and LLMs like Ollama. From smart assistants to insightful models, I engineer systems that think, learn, and evolve.
-🛠️ My backend toolkit includes the sharp precision of FastAPI, the unyielding power of Node.js and Express.js, and the art of building RESTful APIs that power the core of scalable applications.
-💾 Data is my muse — from the structured elegance of PostgreSQL and MySQL, to the agile flexibility of MongoDB, and the realtime realm of Firebase. I even venture into the vectorized frontier of ChromaDB, crafting solutions ready for the AI era.
-🐳 Docker ensures my environments are portable and precise, while Kubernetes allows me to scale and orchestrate with elegance.
-⚙️ My CI/CD mantra flows through GitHub Actions, driving automation that brings code to life instantly.
-🌩️ In the clouds, I soar through AWS and GCP, architecting robust, scalable solutions with the agility of a cloud-native artisan.
-🔧 With Git as my trusty sidekick, version control is second nature, and collaboration tools like Jira keep my missions clear and cohesive.
-💻 From scripting with Bash to engineering with C/C++, from the clarity of Java to the precision of TypeScript, every language is another string on my instrument. Each project is a performance, and every line of code is a note in my digital symphony.
-🔥 I don’t just build software — I shape experiences, engineer intelligence, and lead with innovation. Join me on this epic coding quest, where technology meets artistry!
+🚀 I'm the Conductor of Code and Innovation in the digital symphony! As a Full Stack Virtuoso, I wield both frontend finesse and backend brilliance to create experiences that are as seamless as they are stunning. With Flutter, I craft cross-platform mobile marvels, while JavaScript, TypeScript, Dart, and React are my go-to tools for orchestrating interactive and immersive user interfaces.\n
+🎨 Whether it's bringing ideas to life with pixel-perfect precision on Android or animating fluid screens using Kotlin, Swift, and Flutter, I turn mobile dreams into reality.\n
+🧠 In the realm of intelligence, I delve deep into the world of Machine Learning and AI, working magic with Python, LangChain, and LLMs like Ollama. From smart assistants to insightful models, I engineer systems that think, learn, and evolve.\n
+🛠️ My backend toolkit includes the sharp precision of FastAPI, the unyielding power of Node.js and Express.js, and the art of building RESTful APIs that power the core of scalable applications.\n
+💾 Data is my muse, from the structured elegance of PostgreSQL and MySQL, to the agile flexibility of MongoDB, and the realtime realm of Firebase. I even venture into the vectorized frontier of ChromaDB, crafting solutions ready for the AI era.\n
+🐳 Docker ensures my environments are portable and precise, while Kubernetes allows me to scale and orchestrate with elegance.\n
+⚙️ My CI/CD mantra flows through GitHub Actions, driving automation that brings code to life instantly.\n
+🌩️ In the clouds, I soar through AWS and GCP, architecting robust, scalable solutions with the agility of a cloud-native artisan.\n
+🔧 With Git as my trusty sidekick, version control is second nature, and collaboration tools like Jira keep my missions clear and cohesive.\n
+💻 From scripting with Bash to engineering with C/C++, from the clarity of Java to the precision of TypeScript, every language is another string on my instrument. Each project is a performance, and every line of code is a note in my digital symphony.\n
+🔥 I don’t just build software — I shape experiences, engineer intelligence, and lead with innovation. Join me on this epic coding quest, where technology meets artistry!\n
 
 Skills
 Frontend | Backend | Databases | DevOps | Full Stack | Mobile App Development | Machine Learning & AI
@@ -200,7 +200,7 @@ Developed and implemented advanced image segmentation techniques, including HSV 
 Trained a CNN-based image segmentation model on a dataset of over 30,000 leaf images from five different plants, achieving a validation accuracy of 97.95%.
 Optimized model parameters through extensive experimentation to minimize computational load while maximizing classification accuracy, improving both efficiency and performance.
 
-Achievements
+Awards and Recognition
 Smart India Hackathon 2022 – Finals
 Developed a Fake News Detection AI Website & API, showcasing expertise in combating misinformation and advancing technology for societal benefit 🏅🤖.
 Nirma University National Hackathon 2022 – 1st Place
