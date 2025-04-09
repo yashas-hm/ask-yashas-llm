@@ -28,7 +28,7 @@ jobs:
       - name: Data File Check
         run: |
           FILE_TO_CHECK="api/data.txt"
-          if git diff --name-only HEAD~1..HEAD | grep -q "$FILE_TO_CHECK"; then
+          if git diff --name-only HEAD~1 HEAD | grep -q "$FILE_TO_CHECK"; then
               echo "Data File has been modified. Cancelling workflow."
               exit 0
           else
