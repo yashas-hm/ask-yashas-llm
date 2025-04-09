@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from api.endpoints.answer import answer_endpoint
@@ -21,8 +21,15 @@ app.add_middleware(
 )
 
 @app.get('/')
-def redirect_to_site():
-    return RedirectResponse("https://yashashm.dev", status_code=200)
+def main():
+    return Response(
+        status_code=200,
+        headers={"Location": "/new-path"}
+    )
+
+@app.get('/site')
+def redirect_to_main():
+    return RedirectResponse("https://yashashm.dev", status_code=302)
 
 @app.post('/api/prompt')
 async def answer(query: QueryModel):

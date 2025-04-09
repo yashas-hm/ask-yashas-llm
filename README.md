@@ -49,7 +49,8 @@ it’s facts, timelines, or personal achievements, AskYashas knows the story.
     # export BYPASS_KEY=Key
     ```
 3. Run `vectorestore_generator.py` to generate ChromaDB Vectorstore
-4. Replace URLs in allowed_origins in `SecurityMiddleware` or remove `app.add_middleware(SecurityMiddleware)` in `app.py`
+4. Replace URLs in allowed_origins in `SecurityMiddleware` or remove `app.add_middleware(SecurityMiddleware)` in
+   `app.py`. Alternative you can not add the `BYPASS_KEY`.
 5. Run `uvicorn app:app --host 0.0.0.0 --port 3000` to host api locally
 
 ---
