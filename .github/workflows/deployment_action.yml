@@ -32,7 +32,7 @@ jobs:
           FILE_TO_CHECK="api/data.txt"
           if git diff --name-only HEAD~1 HEAD | grep -q "$FILE_TO_CHECK"; then
               echo "Data File has been modified. Cancelling workflow."
-              exit 0
+              exit 1
           else
               echo "Data File has not been modified."
           fi
