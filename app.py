@@ -12,13 +12,13 @@ api_token = os.environ.get("API_TOKEN")
 llm=LLMChain(api_token)
 
 app.add_middleware(SecurityMiddleware)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-    allow_credentials=True,
-)
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+#     allow_credentials=True,
+# )
 
 @app.get('/')
 def main():
