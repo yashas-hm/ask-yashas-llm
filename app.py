@@ -24,14 +24,7 @@ app.add_middleware(
 
 @app.get('/')
 def main():
-    return Response(
-        status_code=200,
-        headers={"Location": "/new-path"}
-    )
-
-@app.get('/site')
-def redirect_to_main():
-    return RedirectResponse("https://yashashm.dev", status_code=302)
+    return RedirectResponse("https://yashashm.dev", status_code=200)
 
 @app.post('/api/prompt')
 async def answer(query: QueryModel):
