@@ -9,3 +9,4 @@ langchain-community
 langchain-huggingface
 accelerate
 sentence-transformers
+hf_xet
