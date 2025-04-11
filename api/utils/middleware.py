@@ -17,12 +17,14 @@ class SecurityMiddleware(BaseHTTPMiddleware):
         if bypass_middleware(key=request.query_params.get("bypass_key")):
             return await call_next(request)
 
-        if request.url.path == '/' or request.url.path=='/api/healthCheck':
+        if request.url.path == '/':
             return await call_next(request)
 
         allowed_origin = [
-            "https://yashashm.dev",
-            "https://ask.yashashm.dev",
+            "yashashm.dev",
+            "ask.yashashm.dev",
+            # Health Check Domain
+            "healthcheck.railway.app"
         ]
         
         origin = request.headers.get("Origin")
