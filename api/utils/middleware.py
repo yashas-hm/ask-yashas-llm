@@ -23,6 +23,7 @@ class SecurityMiddleware(BaseHTTPMiddleware):
         allowed_origin = [
             "https://yashashm.dev",
             "https://ask.yashashm.dev",
+            "127.0.0.1:3000"
         ]
         origin = request.headers.get("Origin")
         if origin not in allowed_origin:
