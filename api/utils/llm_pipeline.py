@@ -1,3 +1,5 @@
+import os
+
 from api.constants import LLM_MODEL, AI_MSG_KEY, HUMAN_MSG_KEY
 from api.utils.vectorstore import VectorStore
 from langchain.chains import RetrievalQA
@@ -13,6 +15,11 @@ class LLMChain:
         self.llm = GoogleGenerativeAI(model=LLM_MODEL, api_key=key)
         vector_store = VectorStore().load_vector_store()
         self.retriever = vector_store.as_retriever()
+
+    @staticmethod
+    def create_llm_pipeline() -> "LLMChain":
+        api_token = os.environ.get("API_TOKEN")
+        return LLMChain(key=api_token)
 
     def invoke_chain(self, query: str, history: list) -> str:
         llm_history = LLMChain.generate_history_context(history)
