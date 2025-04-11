@@ -1,26 +1,23 @@
-import os
-from fastapi import FastAPI, HTTPException
-from fastapi.responses import RedirectResponse
-
-from api.endpoints.answer import answer_endpoint
-from api.model.query_model import QueryModel
+from api.endpoints import default, health_check
+from api.endpoints.answer import get_prompt_route
 from api.utils.llm_pipeline import LLMChain
-from api.utils.middleware import CORSMiddleware
+from api.utils.middleware import SecurityMiddleware
+from fastapi import FastAPI, APIRouter
+from fastapi.middleware.cors import CORSMiddleware
 
-app=FastAPI()
-api_token = os.environ.get("API_TOKEN")
-llm=LLMChain(api_token)
+llm = LLMChain.create_llm_pipeline()
+app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+router = APIRouter()
 
-app.add_middleware(CORSMiddleware)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=False,
+)
+app.add_middleware(SecurityMiddleware)
 
-@app.get('/')
-def redirect_to_site():
-    return RedirectResponse("https://yashashm.dev", status_code=301)
-
-@app.post('/prompt')
-async def answer(query: QueryModel):
-    try:
-        return await answer_endpoint(query, llm)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    
+app.include_router(default.router)
+app.include_router(health_check.router, prefix='/api')
+app.include_router(get_prompt_route(llm), prefix='/api')
