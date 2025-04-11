@@ -21,10 +21,10 @@ class SecurityMiddleware(BaseHTTPMiddleware):
             return await call_next(request)
 
         allowed_origin = [
-            "yashashm.dev",
-            "ask.yashashm.dev",
+            "https://yashashm.dev",
+            "https://ask.yashashm.dev",
             # Health Check Domain
-            "healthcheck.railway.app"
+            "https://healthcheck.railway.app"
         ]
         
         origin = request.headers.get("Origin")
