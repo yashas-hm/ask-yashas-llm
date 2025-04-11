@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Cone with PAT
+      - name: Clone with PAT
         run: |
           git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}.git .
           git config --global user.email yashashm.dev@gmail.com
