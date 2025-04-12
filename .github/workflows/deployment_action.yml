@@ -1,4 +1,4 @@
-name: Deploy to Render
+name: Deploy to Railway
 
 on:
   # Optional to trigger from GitHub UI

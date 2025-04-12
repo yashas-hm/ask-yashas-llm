@@ -5,6 +5,10 @@ Majmudar) with precision and context-awareness. It combines a powerful language 
 to fetch relevant information from curated knowledge; enabling grounded, factual, and context-rich responses. Whether
 it’s facts, timelines, or personal achievements, AskYashas knows the story.
 
+📖 **Want to dive deeper?** <br>
+[Read the full blog post](https://yashashm.medium.com/build-a-serverless-rag-chatbot-with-fastapi-langchain-google-ai-5e45c9b0e17f)
+to learn how AskYashas was built, step by step!
+
 **Note:** You can use this repository as template to create your own RAG ChatBot. Just have to make a few
 changes, [follow these steps ](#use-this-repo-as-template-)
 
@@ -76,7 +80,7 @@ changes, [follow these steps ](#use-this-repo-as-template-)
 ## Folder Structure 🗂
 
 ```text
-.
+askyashas/
 ├── api/
 │   ├── endpoints/
 │   ├── utils/
