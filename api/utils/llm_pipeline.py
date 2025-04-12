@@ -45,7 +45,7 @@ class LLMChain:
             - For yes/no questions, answer with either 'Yes' or 'No' based on the context.
             - If no relevant information is available and the query is not a greeting or normal conversation, return 'I can't assist with that'.
             - Do not provide any additional commentary or filler text. Focus on precision and correctness from the context.
-            - You can answer responses to greetings but nothing else that is not about me ({NAME}) or you
+            - You can answer responses to greetings but nothing else that is not about me ({NAME}) or you.
             Use the following pieces of retrieved context and relevant history if any to answer the question.
             
             Conversation History:
