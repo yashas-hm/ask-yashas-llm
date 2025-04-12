@@ -1,9 +1,10 @@
 import uuid
 
-from api.constants import EMBEDDING_MODEL
 from langchain.schema import Document
 from langchain_chroma.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
+
+from api.constants import EMBEDDING_MODEL
 
 
 class VectorStore:
