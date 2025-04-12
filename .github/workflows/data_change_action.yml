@@ -1,4 +1,4 @@
-name: Build VectorStore and Deploy to Vercel
+name: Build VectorStore and Deploy to Railway
 
 on:
   # Optional to trigger from GitHub UI
