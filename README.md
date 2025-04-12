@@ -1,13 +1,16 @@
 # 🤖 AskYashas – Your Personalized AI Sidekick
 
-b is a personalized **Retrieval-Augmented Generation (RAG)** chatbot designed to answer questions about me(Yashas
+A personalized **Retrieval-Augmented Generation (RAG)** chatbot designed to answer questions about me(Yashas
 Majmudar) with precision and context-awareness. It combines a powerful language model with a semantic search retriever
 to fetch relevant information from curated knowledge; enabling grounded, factual, and context-rich responses. Whether
 it’s facts, timelines, or personal achievements, AskYashas knows the story.
 
+**Note:** You can use this repository as template to create your own RAG ChatBot. Just have to make a few
+changes, [follow these steps ](#use-this-repo-as-template-)
+
 ---
 
-## 🚀 Features
+## Features 🚀
 
 - ⚡ **Serverless architecture** using FastAPI and LangChain
 - 🧠 **Retrieval-Augmented Generation (RAG)** for factual, personalized Q&A
@@ -18,7 +21,7 @@ it’s facts, timelines, or personal achievements, AskYashas knows the story.
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack 🧱
 
 | Layer            | Tech                 |
 |------------------|----------------------|
@@ -30,7 +33,7 @@ it’s facts, timelines, or personal achievements, AskYashas knows the story.
 
 ---
 
-## 🧩 How it Works
+## How it Works 🧩
 
 1. **Information** → embedded via LangChain into ChromaDB vectorstore.
 2. **Langchain** retrieves relevant chunks using similarity search from ChromaDB.
@@ -39,7 +42,7 @@ it’s facts, timelines, or personal achievements, AskYashas knows the story.
 
 ---
 
-## 🛠 Setup
+## Use this repo as template 🛠
 
 1. Update data.txt with your data
 2. Add variables
@@ -55,14 +58,14 @@ it’s facts, timelines, or personal achievements, AskYashas knows the story.
 
 ---
 
-## ⚙️ CI/CD
+## CI/CD ⚙️
 
 - GitHub Actions automates vectorstore generation and deployment on every push to `main`.
 - Easy to scale and deploy to serverless platforms.
 
 ---
 
-## 🎯 Use Cases
+## Use Cases 🎯
 
 - Showcasing personal projects via conversational AI
 - Fun resume companion
@@ -70,7 +73,7 @@ it’s facts, timelines, or personal achievements, AskYashas knows the story.
 
 ---
 
-## 🗂 Folder Structure
+## Folder Structure 🗂
 
 ```text
 .

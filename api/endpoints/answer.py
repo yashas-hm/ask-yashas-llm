@@ -1,7 +1,8 @@
-from api.model.query_model import QueryModel
-from api.utils.llm_pipeline import LLMChain
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
+
+from api.model.query_model import QueryModel
+from api.utils.llm_pipeline import LLMChain
 
 
 def get_prompt_route(llm: LLMChain):

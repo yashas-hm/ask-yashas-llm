@@ -1,11 +1,12 @@
 import os
 
-from api.constants import LLM_MODEL, AI_MSG_KEY, HUMAN_MSG_KEY
-from api.utils.vectorstore import VectorStore
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain_core.vectorstores.base import VectorStoreRetriever
 from langchain_google_genai.llms import GoogleGenerativeAI
+
+from api.constants import LLM_MODEL, AI_MSG_KEY, HUMAN_MSG_KEY, BOT, NAME
+from api.utils.vectorstore import VectorStore
 
 
 class LLMChain:
@@ -35,8 +36,8 @@ class LLMChain:
     @staticmethod
     def generate_prompt(history: str) -> PromptTemplate:
         prompt_template = f"""
-            Role: You are an AI assistant named AskYashas, for question-answering tasks about me (Yashas Majmudar).
-            Use the following pieces of retrieved context to answer the question about me (Yashas Majmudar) or you (AskYashas).
+            Role: You are an AI assistant named {BOT}, for question-answering tasks about me ({NAME}).
+            Use the following pieces of retrieved context to answer the question about me ({NAME}) or you ({BOT}).
             If you don't know the answer, just say that you can't assist with that.
             Keep the answer to the point follow the guidelines below.
             Guidelines:
@@ -64,7 +65,7 @@ class LLMChain:
         chat_history = []
         for chat in history:
             if chat['role'].upper() == AI_MSG_KEY:
-                chat_history.append(f'AskYashas: {chat["message"]}')
+                chat_history.append(f'{BOT}: {chat["message"]}')
             elif chat['role'].upper() == HUMAN_MSG_KEY:
                 chat_history.append(f'User: {chat["message"]}')
         return '\n'.join(chat_history)

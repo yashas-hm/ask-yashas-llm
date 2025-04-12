@@ -24,7 +24,7 @@ class SecurityMiddleware(BaseHTTPMiddleware):
             "https://yashashm.dev",
             "https://ask.yashashm.dev",
         ]
-        
+
         origin = request.headers.get("Origin")
         if origin not in allowed_origin:
             return JSONResponse({"detail": "Forbidden"}, status_code=403)
